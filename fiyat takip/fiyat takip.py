@@ -28,15 +28,15 @@ def check_price():
 
 def send_mail(urun):
 
-    gonder='alivolkan469@gmail.com'
+    gonder='GONDEREN_MAİL'
     #alıcı e-posta
-    alici='volkancinar58@gmail.com'
+    alici='ALİCİ_MAİL'
     #server başlatıp mail gönderme işlemi
     try:
         server= smtplib.SMTP("smtp.gmail.com",587)
         server.ehlo()
         server.starttls()
-        server.login(gonder,'sxngnitivrtjbkon')
+        server.login(gonder,'SİFRE')
         subject= urun + 'istedigin fiyata dustu'
         body= 'Bu linkten gidebilirsin=>' + url
         mailcontent = f'To:{alici}\nFrom:{gonder}\nSubject:{subject}\n\n{body}'
